@@ -1,0 +1,21 @@
+select ename as name from emp;
+select distinct deptno  from emp;
+select ename name , job from emp where sal>1500;
+select * from emp where sal=1500;
+select * from emp where hiredate<>'01-Jan-81';
+select * from emp where deptno>=20;
+select * from emp where deptno<=30;
+select * from emp where sal !=1500;
+select ename ,sal from emp where sal between 1500 and 2000;
+select empno,ename ,sal from emp where mgr in(7902,7566,7788);
+select * from emp where ename  like '%A%' or where ename like 'S%';
+select * from emp where ename like '%_A%';
+SELECT ENAME,JOB FROM EMP WHERE MGR IS NULL;
+SELECT ENAME FROM EMP WHERE  JOB='CLERK' OR SAL>=1100 ORDER BY ENAME ASC;
+SELECT ENAME ,JOB ,SAL FROM EMP WHERE JOB IN ('SALESMAN','PRESIDENT') AND SAL>1500;
+SELECT ENAME FROM EMPWHERE(JOB='PRESIDENT' OR JOB='SALESMAN') AND SAL>1500
+
+
+--distinct cannot be column name ... because of it a keyword
+--RULES OF PRESIDENCE 1.ALL COMPARISN OPERARTORS  2.NOT 3.AND 4.OR(MID TERM SPECIAL)
+
